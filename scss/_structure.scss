@@ -3,15 +3,16 @@ $dark: #262626;
 $color-black: #000;
 $color-primary: #d3ab55;
 $color-secondary: #bbb;
-
 $font-josefinsans: "Josefin Sans";
 $font-sahel: Sahel, Tahoma;
 $font-nastaliq: Nastaliq,Tahoma;
-
+%fullspace {
+    width: 100%;
+    height: 100%;
+}
 @font-face {
     font-family: Sahel;
-    src: url("../fonts/Sahel-Black-FD.ttf") format("ttf"), url("../fonts/Sahel-Black-FD.woff") format("woff");
-    src: url("../fonts/Sahel-Black-FD.eot") format("eot");
+    src: url("../fonts/Sahel-Black-FD.ttf") format("ttf"), url("../fonts/Sahel-Black-FD.woff") format("woff"), url("../fonts/Sahel-Black-FD.eot") format("eot");
     font-weight: normal;
 }
 

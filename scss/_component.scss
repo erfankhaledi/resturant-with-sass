@@ -10,31 +10,28 @@
     border: 3px solid $color-primary;
     border-radius: 50%;
 }
-
 .main-name {
     font-family: $font-sahel;
     font-size: 50px;
     color: $color-secondary;
     @include textstyle;
 }
-
 .sub-name {
-    font-family: $font-nastaliq;
+    font-family: $font-sahel;
     font-size: 20px;
     color: $color-primary;
     margin-left: 50px;
     @include textstyle;
 }
-
 .main-heading {
     font-family: $font-sahel;
     font-size: 80px;
-    font-weight: 300px;
+    font-weight: 300;
     color: $color-primary;
     margin-top: 10px;
 }
 .sub-heading {
-    font-family: $font-nastaliq;
+    font-family: $font-sahel;
     font-size: 60px;
     font-weight: 300;
     color: $color-secondary;
@@ -44,7 +41,7 @@
     width: 200px;
     height: 50px;
     font-family: $font-sahel;
-    font-size: 30px;
+    font-size: 20px;
     background-color: transparent;
     border: 1px solid $color-primary;
     cursor: pointer;
@@ -52,5 +49,57 @@
     &:hover {
         background-color: $color-primary;
         color: $dark;
+    }
+}
+
+.card {
+    width: 33.3%;
+    height: 30vw;
+    position: relative;
+    overflow: hidden;
+    &:hover .card-overlay {
+        left: 0;
+    }
+    &-overlay {
+        @include flexlayout;
+        @extend %fullspace;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        color: white;
+        background-color: rgba($color-primary, $alpha: 0.6);
+        z-index: 20;
+        transition: left 0.5s;
+
+        &-heading {
+            font-family: $font-sahel;
+            font-size: 70px;
+            @include textstyle;
+        }
+
+        &-paragraph {
+            font-family: $font-sahel;
+            font-size: 30px;
+            margin-bottom: 30px;
+            @include textstyle;
+        }
+
+        &-btn {
+            width: 120px;
+            height: 40px;
+            color: $color-primary;
+            background-color: white;
+            font-family: $font-sahel;
+            font-size: 15px;
+            border: 1px solid $color-primary;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+    }
+    &-img {
+        @extend %fullspace;
+        object-fit: cover;
+        opacity: 0.5;
     }
 }
